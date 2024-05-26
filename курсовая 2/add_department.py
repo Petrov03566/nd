@@ -1,0 +1,51 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QWidget
+
+class Ui_MainWindow(QtWidgets.QMainWindow):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(301, 291)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(36, 20, 191, 31))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.lineEdit_add_Department = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_add_Department.setGeometry(QtCore.QRect(40, 50, 221, 31))
+        self.lineEdit_add_Department.setObjectName("lineEdit_add_Department")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(40, 100, 231, 31))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.lineEdit_2_add_Department = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2_add_Department.setGeometry(QtCore.QRect(40, 130, 221, 31))
+        self.lineEdit_2_add_Department.setObjectName("lineEdit_2_add_Department")
+        self.pushButton_add_base_Department = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_add_base_Department.setGeometry(QtCore.QRect(90, 180, 121, 41))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.pushButton_add_base_Department.setFont(font)
+        self.pushButton_add_base_Department.setObjectName("pushButton_add_base_Department")
+        self.pushButton_exit_Department = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_exit_Department.setGeometry(QtCore.QRect(90, 230, 121, 41))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.pushButton_exit_Department.setFont(font)
+        self.pushButton_exit_Department.setObjectName("pushButton_exit_Department")
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "Номер отделения"))
+        self.label_2.setText(_translate("MainWindow", "Название отделения"))
+        self.pushButton_add_base_Department.setText(_translate("MainWindow", "Добавить"))
+        self.pushButton_exit_Department.setText(_translate("MainWindow", "Отмена"))

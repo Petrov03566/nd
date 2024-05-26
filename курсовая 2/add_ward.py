@@ -1,0 +1,51 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QWidget
+
+class Ui_MainWindow(QtWidgets.QMainWindow):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(247, 287)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(20, 0, 281, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.lineEdit_add_Ward = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_add_Ward.setGeometry(QtCore.QRect(20, 40, 201, 31))
+        self.lineEdit_add_Ward.setObjectName("lineEdit_add_Ward")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 90, 271, 31))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.lineEdit_2_add_Ward = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2_add_Ward.setGeometry(QtCore.QRect(20, 120, 201, 31))
+        self.lineEdit_2_add_Ward.setObjectName("lineEdit_2_add_Ward")
+        self.pushButton_add_Ward = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_add_Ward.setGeometry(QtCore.QRect(60, 170, 121, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.pushButton_add_Ward.setFont(font)
+        self.pushButton_add_Ward.setObjectName("pushButton_add_Ward")
+        self.pushButton_exit_Ward = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_exit_Ward.setGeometry(QtCore.QRect(60, 220, 121, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.pushButton_exit_Ward.setFont(font)
+        self.pushButton_exit_Ward.setObjectName("pushButton_exit_Ward")
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "Номер палаты"))
+        self.label_2.setText(_translate("MainWindow", "Вместимость палаты"))
+        self.pushButton_add_Ward.setText(_translate("MainWindow", "Добавить"))
+        self.pushButton_exit_Ward.setText(_translate("MainWindow", "Отмена"))
